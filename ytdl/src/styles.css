@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.width-100{
+    width:100%;
+}
+
+.border-gray{
+    padding: 0.5em;
+    border:0.01em solid gray;
+}
+.border-gray-without-padding{
+    border:0.01em solid gray;
+}
+
+.btn-left-margin{
+    margin-left: 1%;
+}
+
+.top-bottom-padding{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}

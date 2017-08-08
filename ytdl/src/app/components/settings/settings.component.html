@@ -1,0 +1,61 @@
+<div class="row top-bottom-padding" style="margin-left: -1px;margin-right: -1px;"> <!--Global Play Pause Stop Bar -->
+  <div class="row" style="margin-left: -1px;margin-right: -1px;">
+    <div class="col-md-4 push-2 rounded-left rounded-right">
+      <button href="#" class="btn btn-secondary" [disabled]="isGlobalPlayDisabled"><i class="fa fa-play" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="col-md-4 push-4 rounded-left rounded-right">
+      <button href="#" class="btn btn-secondary" [disabled]="isGlobalPauseDisabled"><i class="fa fa-pause" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="col-md-4 push-6 rounded-left rounded-right">
+      <button href="#" class="btn btn-secondary" [disabled]="isGlobalStopDisabled"><i class="fa fa-stop" aria-hidden="true"></i></button>
+    </div>
+  </div>
+
+  <div class="col-md-1 rounded-left rounded-right push-8 border-gray">
+    <md-slide-toggle (change)="sidenav.toggle(); changeSideNav()" [checked]="sideNavOpen"><i class="fa fa-cogs" aria-hidden="true"></i></md-slide-toggle>
+  </div>
+
+</div>
+
+
+
+<md-sidenav-container  style="height:65vh" (backdropClick)="changeSideNav()">
+  <md-sidenav #sidenav align="end" class="" style="padding-right:5px" opened="false">
+    <ul class="list-group" style="margin:10%">
+      <li class="list-group-item"><h5>Settings</h5></li>
+      <li class="list-group-item">
+        <md-select placeholder="Select Resolution" class="w-100" [(ngModel)]="settings.defaultRes" name="videoRes">
+          <md-option *ngFor="let v of videoRes" [value]="v" >
+            {{v}}
+          </md-option>
+        </md-select>
+      </li>
+
+      <li class="list-group-item">
+        <span class="col-md-8">
+          <md-slider class="w-100" thumb-label="true" step=1 min=0 max=5 tick-interval=5 [(ngModel)] = "settings.numberOfProbes"></md-slider>
+        </span>
+        <span class="col-md-4 push-md-2">
+          <h3>
+          {{settings.numberOfProbes}}
+          </h3>
+        </span>
+        
+      </li>
+
+      <li class="list-group-item">
+        <div class="input-group">
+          <span class="input-group-addon"><button><i class="fa fa-folder-open-o" aria-hidden="true"></i></button></span>
+          <input type="text" class="form-control w-100" placeholder="Default Video Folder Path">
+        </div>
+        
+      </li>
+    </ul>
+
+  </md-sidenav>
+
+  <!-- -->
+ 
+</md-sidenav-container>
