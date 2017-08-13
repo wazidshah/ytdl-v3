@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Settings } from '../../models/settings'
 @Component({
   selector: 'app-settings',
@@ -6,6 +6,8 @@ import { Settings } from '../../models/settings'
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
+  @Input('info') info:any;
+  testInfo:string = "TEST";
   settings:Settings;
   videoRes:string[];
   sideNavOpen:boolean=false;

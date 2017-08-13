@@ -21,3 +21,36 @@
     padding-top: 1%;
     padding-bottom: 1%;
 }
+
+.flex-container{
+    display: flex;
+    height:7vh;
+    
+}
+
+.flex-container >div{
+    border: 1px solid gray;
+}
+
+.video-section{
+    flex-basis: 10%;
+}
+
+.justufyContentCenter{
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+
+.infoSection{
+    flex:3;
+    
+}
+
+.speedSection{
+    flex:1;
+}
+
+.progressSection{
+    flex:1;
+}

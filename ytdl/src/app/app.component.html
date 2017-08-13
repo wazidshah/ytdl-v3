@@ -1,11 +1,11 @@
 <br>
-<app-url></app-url>
+<app-url (infoOut)="grabInfo($event)"></app-url>
 <hr>
 
 <div class="container">
     <div class="card">
-        <app-settings>
-        
+        <app-settings info = "{{info}}">
+            
         </app-settings>
     </div>
 </div>

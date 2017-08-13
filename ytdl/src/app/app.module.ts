@@ -11,15 +11,21 @@ import {MdSlideToggleModule} from '@angular/material';
 import {MdChipsModule} from '@angular/material';
 import {MdProgressSpinnerModule} from '@angular/material';
 
+//ngx-module
+import {NgxElectronModule} from 'ngx-electron';
+
 import { AppComponent } from './app.component';
 import { UrlComponent } from './components/url/url.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { VideoCardComponent } from '../../src/app/components/video-card/video-card.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     UrlComponent,
-    SettingsComponent
+    SettingsComponent,
+    VideoCardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     MdSliderModule,
     MdSlideToggleModule,
     MdChipsModule,
-    MdProgressSpinnerModule
+    MdProgressSpinnerModule,
+    NgxElectronModule
   ],
   providers: [],
   bootstrap: [AppComponent]
