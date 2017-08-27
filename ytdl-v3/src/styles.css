@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mainBg{
+    background-color: #004D40;
+}
+
+.sidenav{
+    padding: 10vw;
+}
+
+.side-container{
+    border: 1px solid gray;
+}
+
+hr{
+    background-color: #B2DFDB;
+}
+
+.videoCardBorder>div{
+    border: 1px solid #B2DFDB;
+}
+
+.liBack{
+    background-color: #00796B !important;
+}
+
+.mat-dialog-container {
+    background-color: #00796B;
+    width: 450px !important;
+    
+}
+
+.linkColor{
+    color: #B2DFDB !important;
+}

@@ -1,23 +1,23 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Settings } from '../../models/settings'
+import { Settings } from '../../models/settings';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
-  @Input('info') info:any;
-  testInfo:string = "TEST";
-  settings:Settings;
-  videoRes:string[];
-  sideNavOpen:boolean=false;
-  isGlobalPlayDisabled:boolean=false;
-  isGlobalPauseDisabled:boolean=false;
-  isGlobalStopDisabled:boolean=false;
+  @Input('info') info: any;
+  testInfo = 'TEST';
+  settings: Settings;
+  videoRes: string[];
+  sideNavOpen= false;
+  isGlobalPlayDisabled:boolean= false;
+  isGlobalPauseDisabled:boolean= false;
+  isGlobalStopDisabled:boolean= false;
   constructor() { }
 
   ngOnInit() {
-    this.videoRes = ["1080p","720p","480p","360p","240p","144p"];
+    this.videoRes = ["720p","480p","360p","240p","144p"];
     this.settings = {
       defaultRes:"420p",
       numberOfProbes:0,
